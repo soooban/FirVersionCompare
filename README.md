@@ -1,6 +1,8 @@
 # FirVersionCompare
 
 基于fir.im应用分发网站的Version Compare 工具类
+![Screen Shot](./screen shot.png)
+
 
 ## 使用
 
