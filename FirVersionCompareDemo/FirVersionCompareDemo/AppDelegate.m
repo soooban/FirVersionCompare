@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  VersionCompare
+//  FirVersionCompareDemo
 //
-//  Created by Parsifal on 15/1/20.
+//  Created by 周国勇 on 15/1/21.
 //  Copyright (c) 2015年 huaban. All rights reserved.
 //
 
@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[FirVersionCompare sharedInstance] compareVersionWithAppKey:@"54894d31d408a67b03001724"];
+    [FirVersionCompare compareVersionWithAppKey:@"54894d31d408a67b03001724"];
     return YES;
 }
 

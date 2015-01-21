@@ -1,19 +1,19 @@
 //
-//  VersionCompareTests.m
-//  VersionCompareTests
+//  FirVersionCompareDemoTests.m
+//  FirVersionCompareDemoTests
 //
-//  Created by Parsifal on 15/1/20.
+//  Created by 周国勇 on 15/1/21.
 //  Copyright (c) 2015年 huaban. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-@interface VersionCompareTests : XCTestCase
+@interface FirVersionCompareDemoTests : XCTestCase
 
 @end
 
-@implementation VersionCompareTests
+@implementation FirVersionCompareDemoTests
 
 - (void)setUp {
     [super setUp];
