@@ -1,0 +1,22 @@
+PODS:
+  - FirVersionCompare (0.0.1):
+    - UIAlertView+Blocks (~> 0.8.1)
+  - UIAlertView+Blocks (0.8.1)
+
+DEPENDENCIES:
+  - FirVersionCompare (from `https://github.com/jokefaker/FirVersionCompare.git`)
+
+EXTERNAL SOURCES:
+  FirVersionCompare:
+    :git: https://github.com/jokefaker/FirVersionCompare.git
+
+CHECKOUT OPTIONS:
+  FirVersionCompare:
+    :commit: 91c2310b16e927658033b4a6add8ff97082ffdba
+    :git: https://github.com/jokefaker/FirVersionCompare.git
+
+SPEC CHECKSUMS:
+  FirVersionCompare: 1e501b6d55bb1eb982df625f6417122e9bef493d
+  UIAlertView+Blocks: 0b749f1f7bd5131ff2233b30a406c1585a7171b2
+
+COCOAPODS: 0.35.0

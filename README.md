@@ -1,13 +1,13 @@
 # FirVersionCompare
 
 基于fir.im应用分发网站的Version Compare 工具类
+
 ![Screen Shot](./screen shot.png)
 
-
 ## 使用
-
-将FirVersionCompare文件夹添加到工程
-
+### CocoaPods安装
+	pod 'FirVersionCompare', :git => 'https://github.com/jokefaker/FirVersionCompare.git'
+### 代码
 	#import "FirVersionCompare.h"
 
 	@interface AppDelegate ()
@@ -25,5 +25,4 @@
 
 ## 注意
 
-* FirVersionCompare 内集成了第三方类库UIAlertView+Blocks，注意不要和你的工程冲突
-* FirVersionCompare 理论支持iOS5+，但是只在iOS7、iOS8下测试过
+* iOS7 +

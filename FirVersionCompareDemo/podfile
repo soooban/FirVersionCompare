@@ -1,5 +1,4 @@
 platform :ios, '7.0'
 inhibit_all_warnings!
 source 'https://github.com/CocoaPods/Specs.git'
-pod 'UIAlertView+Blocks', '~> 0.8.1'
 pod 'FirVersionCompare', :git => 'https://github.com/jokefaker/FirVersionCompare.git'
