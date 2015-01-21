@@ -14,8 +14,6 @@
 		01C9B45C1A6F4E350043955D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01C9B45B1A6F4E350043955D /* Images.xcassets */; };
 		01C9B45F1A6F4E350043955D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01C9B45D1A6F4E350043955D /* LaunchScreen.xib */; };
 		01C9B46B1A6F4E350043955D /* FirVersionCompareDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B46A1A6F4E350043955D /* FirVersionCompareDemoTests.m */; };
-		01C9B47C1A6F4F110043955D /* FirVersionCompare.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B47B1A6F4F110043955D /* FirVersionCompare.m */; };
-		01C9B4821A6F53C00043955D /* UIAlertView+Blocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C9B4811A6F53C00043955D /* UIAlertView+Blocks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,10 +40,6 @@
 		01C9B4641A6F4E350043955D /* FirVersionCompareDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FirVersionCompareDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01C9B4691A6F4E350043955D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		01C9B46A1A6F4E350043955D /* FirVersionCompareDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirVersionCompareDemoTests.m; sourceTree = "<group>"; };
-		01C9B47A1A6F4F110043955D /* FirVersionCompare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirVersionCompare.h; sourceTree = "<group>"; };
-		01C9B47B1A6F4F110043955D /* FirVersionCompare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirVersionCompare.m; sourceTree = "<group>"; };
-		01C9B4801A6F53C00043955D /* UIAlertView+Blocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Blocks.h"; sourceTree = "<group>"; };
-		01C9B4811A6F53C00043955D /* UIAlertView+Blocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Blocks.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +85,6 @@
 				01C9B4531A6F4E350043955D /* AppDelegate.m */,
 				01C9B4551A6F4E350043955D /* ViewController.h */,
 				01C9B4561A6F4E350043955D /* ViewController.m */,
-				01C9B4791A6F4F110043955D /* FirVersionCompare */,
 				01C9B4581A6F4E350043955D /* Main.storyboard */,
 				01C9B45B1A6F4E350043955D /* Images.xcassets */,
 				01C9B45D1A6F4E350043955D /* LaunchScreen.xib */,
@@ -124,18 +117,6 @@
 				01C9B4691A6F4E350043955D /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		01C9B4791A6F4F110043955D /* FirVersionCompare */ = {
-			isa = PBXGroup;
-			children = (
-				01C9B4801A6F53C00043955D /* UIAlertView+Blocks.h */,
-				01C9B4811A6F53C00043955D /* UIAlertView+Blocks.m */,
-				01C9B47A1A6F4F110043955D /* FirVersionCompare.h */,
-				01C9B47B1A6F4F110043955D /* FirVersionCompare.m */,
-			);
-			name = FirVersionCompare;
-			path = ../../FirVersionCompare;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,9 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01C9B47C1A6F4F110043955D /* FirVersionCompare.m in Sources */,
 				01C9B4571A6F4E350043955D /* ViewController.m in Sources */,
-				01C9B4821A6F53C00043955D /* UIAlertView+Blocks.m in Sources */,
 				01C9B4541A6F4E350043955D /* AppDelegate.m in Sources */,
 				01C9B4511A6F4E350043955D /* main.m in Sources */,
 			);
@@ -433,6 +412,7 @@
 				01C9B4701A6F4E350043955D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		01C9B4711A6F4E350043955D /* Build configuration list for PBXNativeTarget "FirVersionCompareDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -441,6 +421,7 @@
 				01C9B4731A6F4E350043955D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
