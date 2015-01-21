@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
 
   s.name         = "FirVersionCompare"
   s.version      = "0.0.1"
-  s.summary      = "基于fir.im应用分发网站的Version Compare 工具类."
+  s.summary      = "Version Compare Tool for fir.im."
 
   # s.description  = <<-DESC
   #                 A longer description of FirVersionCompare in Markdown format.
