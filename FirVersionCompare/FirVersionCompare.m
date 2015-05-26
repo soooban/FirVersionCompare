@@ -36,10 +36,14 @@
                 NSLog(@"Data -> JSONObject Failed With Error : %@", error.localizedDescription);
             }else{
                 NSString *remoteVersion = responseDictionary[@"versionShort"];
+                NSString *remoteBuild = responseDictionary[@"version"];
                 NSString *localVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+                NSString *localBuild = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
                 NSString *changelog = responseDictionary[@"changelog"];
                 NSString *update_url = responseDictionary[@"update_url"];
-                if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending) {
+                if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending||
+                    ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedSame&&
+                     [remoteBuild compare:localBuild options:NSNumericSearch] == NSOrderedDescending)) {
                     NSString *message = [NSString stringWithFormat:@"最新版本:%@ 本地版本:%@ 更新内容:%@ 是否更新?", remoteVersion, localVersion, changelog];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIAlertView showWithTitle:@"提示" message:message cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
