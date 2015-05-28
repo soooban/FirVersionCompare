@@ -7,7 +7,7 @@
 //
 
 #import "FirVersionCompare.h"
-#import "UIAlertView+Blocks.h"
+#import "UIAlertView+BlocksKit.h"
 
 #define kBASE_URL @"http://fir.im/api/v2/app/version/"
 
@@ -46,11 +46,15 @@
                      [remoteBuild compare:localBuild options:NSNumericSearch] == NSOrderedDescending)) {
                     NSString *message = [NSString stringWithFormat:@"最新版本:%@ 本地版本:%@ 更新内容:%@ 是否更新?", remoteVersion, localVersion, changelog];
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [UIAlertView showWithTitle:@"提示" message:message cancelButtonTitle:@"取消" otherButtonTitles:@[@"确定"] tapBlock:^(UIAlertView *alertView, NSInteger buttonIndex) {
-                            if (buttonIndex == 1) {
-                                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:update_url]];
-                            }
-                        }];
+                        [UIAlertView bk_showAlertViewWithTitle:@"提示"
+                                                       message:message
+                                             cancelButtonTitle:@"取消"
+                                             otherButtonTitles:@[@"确定"]
+                                                       handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
+                                                           if (buttonIndex == 1) {
+                                                               [[UIApplication sharedApplication] openURL:[NSURL URLWithString:update_url]];
+                                                           }
+                                                       }];
                     });
                 }
             }

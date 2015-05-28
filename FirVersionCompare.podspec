@@ -131,6 +131,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   # s.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
-  s.dependency "UIAlertView+Blocks", "~> 0.8.1"
+  s.dependency "BlocksKit", "~> 2.2.5"
 
 end
