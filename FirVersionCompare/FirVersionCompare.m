@@ -38,13 +38,13 @@
                 NSString *remoteVersion = responseDictionary[@"versionShort"];
                 NSString *remoteBuild = responseDictionary[@"version"];
                 NSString *localVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-                NSString *localBuild = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+                NSString *localBuild = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
                 NSString *changelog = responseDictionary[@"changelog"];
                 NSString *update_url = responseDictionary[@"update_url"];
                 if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending||
                     ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedSame&&
                      [remoteBuild compare:localBuild options:NSNumericSearch] == NSOrderedDescending)) {
-                    NSString *message = [NSString stringWithFormat:@"最新版本:%@ 本地版本:%@ 更新内容:%@ 是否更新?", remoteVersion, localVersion, changelog];
+                    NSString *message = [NSString stringWithFormat:@"最新版本:%@『%@』 本地版本:%@『%@』 更新内容:%@ 是否更新?", remoteVersion,remoteBuild, localVersion,localBuild, changelog];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIAlertView bk_showAlertViewWithTitle:@"提示"
                                                        message:message
