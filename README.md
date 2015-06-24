@@ -8,6 +8,7 @@
 ### CocoaPods安装
 	pod 'FirVersionCompare', :git => 'https://github.com/jokefaker/FirVersionCompare.git'
 ### 代码
+```Objective-C
 	#import "FirVersionCompare.h"
 
 	@interface AppDelegate ()
@@ -20,7 +21,8 @@
     	// Override point for customization after application launch.
     	[FirVersionCompare compareVersionWithAppKey:@"54894d31d408a67b03001724"];
     	return YES;
-	}    
+	}
+```
 详细见FirVersionCompareDemo
 
 ## 注意
