@@ -19,7 +19,7 @@
 
 	- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     	// Override point for customization after application launch.
-    	[FirVersionCompare compareVersionWithAppKey:@"54894d31d408a67b03001724"];
+    	[FirVersionCompare compareVersionWithApiKey:@"54894d31d408a67b03001724"];
     	return YES;
 	}
 ```
@@ -28,3 +28,6 @@
 ## 注意
 
 * iOS7 +
+
+## 更新
+* 2015-07-15 更新fir的api接口，使用apikey取代appid
