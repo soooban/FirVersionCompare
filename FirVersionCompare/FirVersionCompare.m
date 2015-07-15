@@ -13,12 +13,13 @@
 
 @implementation FirVersionCompare
 
-+ (void)compareVersionWithAppKey:(NSString *)key
++ (void)compareVersionWithApiKey:(NSString *)key
 {
     NSOperationQueue *mainQueue = [[NSOperationQueue alloc] init];
     [mainQueue setMaxConcurrentOperationCount:1];
     
-    NSString *url = [NSString stringWithFormat:@"%@%@", kBASE_URL, key];
+    NSString *bundleId = [NSBundle mainBundle].bundleIdentifier;
+    NSString *url = [NSString stringWithFormat:@"%@%@?api_token=%@", kBASE_URL, bundleId, key];
 
     // Create the request.
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc ]initWithURL:[NSURL URLWithString:url]];

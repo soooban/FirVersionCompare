@@ -10,6 +10,6 @@
 
 @interface FirVersionCompare : NSObject
 
-+ (void)compareVersionWithAppKey:(NSString *)key;
++ (void)compareVersionWithApiKey:(NSString *)key;
 
 @end

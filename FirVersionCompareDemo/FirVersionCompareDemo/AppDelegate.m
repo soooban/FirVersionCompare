@@ -18,7 +18,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [FirVersionCompare compareVersionWithAppKey:@"54894d31d408a67b03001724"];
+    [FirVersionCompare compareVersionWithApiKey:@"93fe440b0c2371550f57b088ce04a6da"];
     return YES;
 }
 

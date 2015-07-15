@@ -1,4 +1,4 @@
 platform :ios, '7.0'
 inhibit_all_warnings!
-source 'https://github.com/CocoaPods/Specs.git'
-pod 'FirVersionCompare', :git => 'https://github.com/jokefaker/FirVersionCompare.git'
+source 'https://git.oschina.net/lexrus/specs.git'
+pod 'FirVersionCompare', :path => '..'

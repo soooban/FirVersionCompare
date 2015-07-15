@@ -1,22 +1,31 @@
 PODS:
+  - BlocksKit (2.2.5):
+    - BlocksKit/All (= 2.2.5)
+  - BlocksKit/All (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+    - BlocksKit/MessageUI
+    - BlocksKit/UIKit
+  - BlocksKit/Core (2.2.5)
+  - BlocksKit/DynamicDelegate (2.2.5)
+  - BlocksKit/MessageUI (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
+  - BlocksKit/UIKit (2.2.5):
+    - BlocksKit/Core
+    - BlocksKit/DynamicDelegate
   - FirVersionCompare (0.0.1):
-    - UIAlertView+Blocks (~> 0.8.1)
-  - UIAlertView+Blocks (0.8.1)
+    - BlocksKit (~> 2.2.5)
 
 DEPENDENCIES:
-  - FirVersionCompare (from `https://github.com/jokefaker/FirVersionCompare.git`)
+  - FirVersionCompare (from `..`)
 
 EXTERNAL SOURCES:
   FirVersionCompare:
-    :git: https://github.com/jokefaker/FirVersionCompare.git
-
-CHECKOUT OPTIONS:
-  FirVersionCompare:
-    :commit: 91c2310b16e927658033b4a6add8ff97082ffdba
-    :git: https://github.com/jokefaker/FirVersionCompare.git
+    :path: ".."
 
 SPEC CHECKSUMS:
-  FirVersionCompare: 1e501b6d55bb1eb982df625f6417122e9bef493d
-  UIAlertView+Blocks: 0b749f1f7bd5131ff2233b30a406c1585a7171b2
+  BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
+  FirVersionCompare: 948d9d25b219815a48670a74e073bd1297bb8467
 
-COCOAPODS: 0.35.0
+COCOAPODS: 0.37.2
