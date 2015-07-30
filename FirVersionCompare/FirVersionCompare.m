@@ -9,7 +9,7 @@
 #import "FirVersionCompare.h"
 #import "UIAlertView+BlocksKit.h"
 
-#define kBASE_URL @"http://fir.im/api/v2/app/version/"
+#define kBASE_URL @"http://api.fir.im/apps/latest/"
 
 @implementation FirVersionCompare
 
@@ -18,8 +18,7 @@
     NSOperationQueue *mainQueue = [[NSOperationQueue alloc] init];
     [mainQueue setMaxConcurrentOperationCount:1];
     
-    NSString *bundleId = [NSBundle mainBundle].bundleIdentifier;
-    NSString *url = [NSString stringWithFormat:@"%@%@?api_token=%@", kBASE_URL, bundleId, key];
+    NSString *url = [NSString stringWithFormat:@"%@%@", kBASE_URL, key];
 
     // Create the request.
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc ]initWithURL:[NSURL URLWithString:url]];
@@ -45,12 +44,12 @@
                 if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending||
                     ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedSame&&
                      [remoteBuild compare:localBuild options:NSNumericSearch] == NSOrderedDescending)) {
-                    NSString *message = [NSString stringWithFormat:@"最新版本:%@『%@』 本地版本:%@『%@』 更新内容:%@ 是否更新?", remoteVersion,remoteBuild, localVersion,localBuild, changelog];
+                    NSString *message = [NSString stringWithFormat:@"Latest: %@ (%@) Current: %@ (%@) Changelog:%@ Update?", remoteVersion,remoteBuild, localVersion,localBuild, changelog];
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [UIAlertView bk_showAlertViewWithTitle:@"提示"
+                        [UIAlertView bk_showAlertViewWithTitle:@"New Version is available"
                                                        message:message
-                                             cancelButtonTitle:@"取消"
-                                             otherButtonTitles:@[@"确定"]
+                                             cancelButtonTitle:@"Cancel"
+                                             otherButtonTitles:@[@"Download"]
                                                        handler:^(UIAlertView *alertView, NSInteger buttonIndex) {
                                                            if (buttonIndex == 1) {
                                                                [[UIApplication sharedApplication] openURL:[NSURL URLWithString:update_url]];

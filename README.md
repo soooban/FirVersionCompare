@@ -1,13 +1,13 @@
 # FirVersionCompare
 
-基于fir.im应用分发网站的Version Compare 工具类
+Version Comparing in FIR.im
 
 ![Screen Shot](./screen shot.png)
 
-## 使用
-### CocoaPods安装
-	pod 'FirVersionCompare', :git => 'https://github.com/jokefaker/FirVersionCompare.git'
-### 代码
+## Installation
+### CocoaPods
+	pod 'FirVersionCompare', :git => 'https://github.com/harryworld/FirVersionCompare.git'
+### Code
 ```Objective-C
 	#import "FirVersionCompare.h"
 
@@ -23,11 +23,11 @@
     	return YES;
 	}
 ```
-详细见FirVersionCompareDemo
+Reference in FirVersionCompareDemo
 
-## 注意
+## Remarks
 
 * iOS7 +
 
-## 更新
-* 2015-07-15 更新fir的api接口，使用apikey取代appid
+## Updates
+* 2015-07-15 Supports apikey
