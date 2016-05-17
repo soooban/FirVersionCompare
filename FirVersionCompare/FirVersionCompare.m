@@ -19,7 +19,7 @@
     [mainQueue setMaxConcurrentOperationCount:1];
     
     NSString *bundleId = [NSBundle mainBundle].bundleIdentifier;
-    NSString *url = [NSString stringWithFormat:@"%@?api_token=%@type=ios", kBASE_URL, bundleId, key];
+    NSString *url = [NSString stringWithFormat:@"%@%@?api_token=%@&type=ios", kBASE_URL, bundleId, key];
 
     // Create the request.
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc ]initWithURL:[NSURL URLWithString:url]];
