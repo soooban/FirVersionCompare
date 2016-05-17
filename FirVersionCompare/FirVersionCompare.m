@@ -9,7 +9,7 @@
 #import "FirVersionCompare.h"
 #import "UIAlertView+BlocksKit.h"
 
-#define kBASE_URL @"http://fir.im/api/v2/app/version/"
+#define kBASE_URL @"http://api.fir.im/apps/latest/"
 
 @implementation FirVersionCompare
 
@@ -19,7 +19,7 @@
     [mainQueue setMaxConcurrentOperationCount:1];
     
     NSString *bundleId = [NSBundle mainBundle].bundleIdentifier;
-    NSString *url = [NSString stringWithFormat:@"%@%@?api_token=%@", kBASE_URL, bundleId, key];
+    NSString *url = [NSString stringWithFormat:@"%@?api_token=%@type=ios", kBASE_URL, bundleId, key];
 
     // Create the request.
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc ]initWithURL:[NSURL URLWithString:url]];
@@ -37,7 +37,7 @@
                 NSLog(@"Data -> JSONObject Failed With Error : %@", error.localizedDescription);
             }else{
                 NSString *remoteVersion = responseDictionary[@"versionShort"];
-                NSString *remoteBuild = responseDictionary[@"version"];
+                NSString *remoteBuild = responseDictionary[@"build"];
                 NSString *localVersion = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
                 NSString *localBuild = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
                 NSString *changelog = responseDictionary[@"changelog"];
