@@ -1,4 +1,3 @@
 platform :ios, '7.0'
 inhibit_all_warnings!
-source 'https://git.oschina.net/lexrus/specs.git'
 pod 'FirVersionCompare', :path => '..'

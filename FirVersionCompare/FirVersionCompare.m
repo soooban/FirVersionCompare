@@ -42,9 +42,7 @@
                 NSString *localBuild = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"];
                 NSString *changelog = responseDictionary[@"changelog"];
                 NSString *update_url = responseDictionary[@"update_url"];
-                if ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedDescending||
-                    ([remoteVersion compare:localVersion options:NSNumericSearch] == NSOrderedSame&&
-                     [remoteBuild compare:localBuild options:NSNumericSearch] == NSOrderedDescending)) {
+                if (![remoteBuild isEqualToString:localBuild] || ![remoteVersion isEqualToString:localVersion]) {
                     NSString *message = [NSString stringWithFormat:@"最新版本:%@『%@』 本地版本:%@『%@』 更新内容:%@ 是否更新?", remoteVersion,remoteBuild, localVersion,localBuild, changelog];
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [UIAlertView bk_showAlertViewWithTitle:@"提示"
